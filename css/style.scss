@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.content-container {
+    background-color: #ff0000;
+    overflow: hidden;
+}
+nav {
+    height: 7vh;
+}
+#section-1 {
+    height: 93vh;
+}
+#section-2 {
+    background-color: #000444;
+}
+#section-3 {
+    background-color: #440000;
+}
+section.section-content {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        color: #fff;
+        font-size: 3rem;
+    }
+}
