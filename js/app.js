@@ -80,9 +80,22 @@ $(() => {
       { autoAlpha: 0, y: -100 },
       { autoAlpha: 1, y: 0, duration: 0.5 }
     );
-  }
+
+}
 
   init();
 
+ 
+
   ////////////////////////document ready function ends here
 });
+
+const scroll = new LocomotiveScroll({
+      // el: document.querySelector('body'),
+      el: document.querySelector('.content-container'),
+      // el: conWrap,
+      smooth: true,
+      // offset: ["10vh", "0"],
+      // initPosition: {x:0, y: "10vh"},
+      lerp: 0.1
+  });  
