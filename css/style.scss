@@ -1,33 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&family=Montserrat:wght@200&display=swap");
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, san-serif;
 }
 .content-container {
-    background-color: #ff0000;
-    overflow: hidden;
+  background-color: #fff;
+//   background-color: red;
+  overflow: hidden;
 }
 nav {
-    height: 7vh;
+
+    z-index: 3;
+  height: 7vh;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  text-transform: uppercase;
+  color: #656565;
+  ul {
+      display: flex;
+      margin-left: auto;
+      list-style: none;
+      li {
+          padding: 0 0 0 1rem;
+          a {
+              text-decoration: none;
+              cursor: pointer;
+              color: #656565;
+          }
+          a:hover {
+              color: #000;
+          }
+          a::before {
+              content:'';
+              display: block;
+              height: 3px;
+              background: red;
+              position: relative;
+              top: 1.5rem;
+              width: 0;
+              transition: all ease-in-out 250ms;
+          }
+          a:hover::before {
+              width: 100%;
+          }
+      }
+  }
 }
 #section-1 {
-    height: 93vh;
+  height: 93vh;
 }
 #section-2 {
-    background-color: #000444;
+  background-color: #000444;
+  h1 {
+    //   visibility: hidden;
+  }
 }
 #section-3 {
-    background-color: #440000;
+  background-color: #440000;
 }
 section.section-content {
-    width: 100vw;
-    height: 100vh;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    h1 {
-        color: #fff;
-        font-size: 3rem;
-    }
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    color: #fff;
+    font-size: 3rem;
+  }
 }
+
+.cursor {
+    background-color: #919191;// change to transparent after
+    background-color: transparent;
+    width: 2rem;
+    height: 2rem;
+    border: 0.125rem solid red;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    // transition-property: background-color, width, height;
+    transition-property: width, height;
+}
+
+div.link-grow {
+    width: 6rem;
+    height: 6rem;
+    // background-color: transparent;
+}
+
