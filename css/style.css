@@ -2,7 +2,8 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: Montserrat, san-serif;
 }
 
@@ -14,14 +15,20 @@
 nav {
   z-index: 3;
   height: 7vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0 2rem;
   text-transform: uppercase;
   color: #656565;
 }
 
 nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-left: auto;
   list-style: none;
@@ -49,6 +56,7 @@ nav ul li a::before {
   position: relative;
   top: 1.5rem;
   width: 0;
+  -webkit-transition: all ease-in-out 250ms;
   transition: all ease-in-out 250ms;
 }
 
@@ -72,9 +80,15 @@ section.section-content {
   width: 100vw;
   height: 100vh;
   background-color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 section.section-content h1 {
@@ -91,9 +105,12 @@ section.section-content h1 {
   border-radius: 50%;
   position: absolute;
   z-index: 2;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   pointer-events: none;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-transition-property: width, height;
   transition-property: width, height;
 }
 

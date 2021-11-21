@@ -34,43 +34,43 @@ $(() => {
 
     // toggleActions states: onEnter, onLeave, onEnterBack, and onLeaveBack,
     // / toggleActions options: play, pause, resume, reverse, complete, restart, reset, or none
-    const tl1 = gsap
-      .timeline
-      //           {
-      //           scrollTrigger: {
-      //             trigger: conWrap,
-      //             start: '0% top',
-      //             end: '30% center',
-      //                 markers: {startColor: 'green', endColor: 'red', fontSize: '18px'},
-      //                 marker: true,
+//     const tl1 = gsap.timeline(
+//                 {
+//                 scrollTrigger: {
+//                   trigger: conWrap,
+//                   start: '0% top',
+//                   end: '30% center',
+//                       markers: {startColor: 'green', endColor: 'red', fontSize: '18px'},
+//                       marker: true,
 
-      //             toggleActions: 'play none resume reverse',
-      //             pin: true,
-      //             pinSpacing: false
-      //           }
-      //     }
-      ();
+//                   toggleActions: 'play none none reverse',
+//                   pin: true,
+//                   pinSpacing: false
+//                 }
+//           }
+// );
 
-    tl1.from(conWrap, { autoAlpha: 0, duration: 4 });
-    tl1.from(sect_1, { xPercent: -100, duration: 1 }, "-=2");
-    tl1.fromTo(
-      h1_sect1,
-      { autoAlpha: 0, y: -100 },
-      { autoAlpha: 1, y: 0, duration: 0.5 }
-    );
+//     tl1.from(conWrap, { autoAlpha: 0, duration: 4 });
+//     tl1.from(sect_1, { xPercent: -100, duration: 1 }, "-=2");
+//     tl1.fromTo(
+//       h1_sect1,
+//       { autoAlpha: 0, y: -100 },
+//       { autoAlpha: 1, y: 0, duration: 0.5 }
+//     );
 
     const tl2 = gsap.timeline({
       scrollTrigger: {
         trigger: sect_2,
         //     start: 'top center',//the first value is the start position on the trigger element, second value is the scrollstart position on the viewport
         //     end: 'bottom 40%',//the first value is the end position on the trigger element, second value is the scrollend position on the viewport
-        start: "top 30%",
-        end: "center center",
+        start: "top 70%",
+        end: "top center",
         markers: { startColor: "white", endColor: "red", fontSize: "18px" },
         marker: true,
         //     onEnter, onLeave, onEnterBack, and onLeaveBack,
         // play, pause, resume, reverse, complete, restart, reset, or none
         //toggleActions: 'play none resume reverse',
+        toggleActions: 'restart none none reverse',
         // pin: true,
         // pinSpacing: false
       },
